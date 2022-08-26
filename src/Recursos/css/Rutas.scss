@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background-color: #112B3C;
+}
+
+main {
+    margin: 16px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    
+    background: #FF8C32;
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.navbar__title {
+    margin-right: auto;
+    font-size: 150%;
+    padding: 12px 16px;
+}
+
+.navbar__item {
+    padding: 16px 16px;
+    cursor: pointer;
+    vertical-align: middle;
+}

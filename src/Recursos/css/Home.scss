@@ -1,0 +1,64 @@
+.row_cards{
+    //border: #2f916f solid 2px;
+    width: 332px;
+    height: 349px;
+    margin: 10px;
+    background-color: #002B5B;
+    border-radius: 30px;
+    &__column{
+        display: flex;
+        padding: 10px 20px 1px 20px;
+        //text-align: center;
+        border-image: linear-gradient(to left #2f916f 70%, #045237 100%) 1;
+        &__title{
+            width: 140px;
+            color: #3B9AE1;
+            font-weight: bold
+        }
+        &__info{
+            color: #5FD068;
+            margin-left: 15px;
+        }
+    }
+
+    &__btn{
+        margin: 10% 40%;
+        width: 170px;
+        display: flex;
+
+        &__icono{
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+            margin-right: 3%;
+            margin-top: 3px;
+        }
+    }
+}
+
+.principal{
+    height: 760px;
+    background-color: #112B3C;
+}
+
+.contendor-row{
+    display: flex;
+    background-color: #125688;
+}
+
+.container-scroll-drag {
+    // padding-top: 10px;
+    background-color: #f6f6f6;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.indiana-scroll-container--hide-scrollbars {
+    overflow: auto !important;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
