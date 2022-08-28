@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { obtenerDatosStarWars } from '../Servicios/ApiStarWars';
-
 export const DataContext = createContext();
 
 
@@ -18,8 +17,33 @@ export const DataProvider = (props) => {
         obtenerDatosApi();
       }, []);
 
+    const agregarFavoritos = (idFavoritos) =>{
+      data.map((values, key) => {
+        if (idFavoritos === key) {
+          
+          setDataFavorit(
+            preventeDato => [...preventeDato, values]
+          );
+          
+        }
+      });
+      
+    }
+
+
+    const eliminarFavoritos = (llaveFavoritos) => {
+      const updatefavoritos = dataFavorit.filter((item , index) => index !== llaveFavoritos);
+      setDataFavorit(updatefavoritos);
+    }
+
+    const dataEnviar = {
+      data,
+      dataFavorit,
+      agregarFavoritos,
+      eliminarFavoritos
+    }
     return (
-        <DataContext.Provider value={{ data, setData, dataFavorit, setDataFavorit }} >
+        <DataContext.Provider value={{ dataEnviar}} >
             { props.children }
         </DataContext.Provider>
     )

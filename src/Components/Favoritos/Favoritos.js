@@ -5,12 +5,9 @@ import { DataContext } from '../../context/ApiContext';
 import { Rutas } from '../Rutas/Rutas';
 
 export const Favoritos = () => {
-  const { dataFavorit, setDataFavorit } = useContext(DataContext);
+  const { dataEnviar } = useContext(DataContext);
 
-  const eliminarFavoritos = (llaveFavoritos) => {
-    const updatefavoritos = dataFavorit.filter((item , index) => index !== llaveFavoritos);
-    setDataFavorit(updatefavoritos);
-  }
+  
 
   return (
     <div>
@@ -22,8 +19,8 @@ export const Favoritos = () => {
           style={{width: '100%', height: '422px', display: '-webkit-box', backgroundColor: '#125688'}}
         >
           <ContenidoCards 
-            dataCard={dataFavorit} 
-            accionBtn={eliminarFavoritos} 
+            dataCard={dataEnviar.dataFavorit} 
+            accionBtn={dataEnviar.eliminarFavoritos} 
             textoBtn='Eliminar de favoritos'
             componente={'favoritos'}
           />

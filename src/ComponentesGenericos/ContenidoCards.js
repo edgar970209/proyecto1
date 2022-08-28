@@ -18,7 +18,7 @@ export const ContenidoCards = (props) => {
             imagen = favorito;
         }
         
-
+        
         return (<div key={key} className='row_cards' >
         <div className='row_cards__column'>
             <p className='row_cards__column__title'>Nombre</p>
